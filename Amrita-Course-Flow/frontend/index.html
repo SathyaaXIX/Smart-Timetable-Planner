@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amrita Course Flow</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <main class="loading-screen">
+        <div class="spinner"></div>
+      </main>
+    </div>
+    <script>
+      window.__acfBooted = false;
+      setTimeout(() => {
+        if (window.__acfBooted) return;
+        const app = document.getElementById("app");
+        if (!app) return;
+        app.innerHTML = `
+          <main style="min-height:100vh;display:grid;place-items:center;padding:24px;background:#f6f7fb;color:#172033;font-family:Inter,ui-sans-serif,system-ui">
+            <section style="max-width:860px;width:100%;background:#fff;border:1px solid #e7e9ef;border-radius:10px;padding:18px 20px;box-shadow:0 10px 24px rgba(20,30,55,.08)">
+              <h2 style="margin:0 0 10px;color:#8b1538">Portal Failed to Start</h2>
+              <p style="margin:0 0 12px">Frontend script did not boot. Click reload below.</p>
+              <button onclick="location.reload()" style="min-height:40px;padding:10px 14px;border:1px solid transparent;border-radius:7px;color:#fff;background:#8b1538;font-weight:700;cursor:pointer">Reload Page</button>
+            </section>
+          </main>
+        `;
+      }, 3000);
+    </script>
+    <script type="module" src="/app.js?v=20260508-5"></script>
+  </body>
+</html>

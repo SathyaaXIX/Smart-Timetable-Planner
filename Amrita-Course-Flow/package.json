@@ -14,5 +14,9 @@
     "express": "^5.1.0",
     "express-session": "^1.18.2",
     "mysql2": "^3.22.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "typescript": "^5.9.2"
   }
 }
